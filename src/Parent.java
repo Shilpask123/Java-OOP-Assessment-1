@@ -11,7 +11,10 @@ class Child extends Parent{
         System.out.println("Inside Child class");
     }
     public static void main(String[] args){
-        Child c=new Child();
-        c.message();
+        Parent p=new Parent();
+        p.message();  // calling parent class method
+        p=new Child(); //Parent reference to child object for accessing overidden method
+        p.message(); // calling child class method
     }
 }
+
